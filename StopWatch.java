@@ -45,6 +45,11 @@ public class StopWatch
 
     public String toString()
     {
-        return "I need to implement";
+        long elapsedSecs = elapsedTime()/1000;
+        long elapsedHours = elapsedSecs/3600;
+        elapsedSecs -= (elapsedHours*3600);
+        long elapsedMins = elapsedSecs/60;
+        elapsedSecs -= (elapsedMins*60);
+        return elapsedHours + "h " + elapsedMins + "m " + elapsedSecs + "s";
     }
 }
